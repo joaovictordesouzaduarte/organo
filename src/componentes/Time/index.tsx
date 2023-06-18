@@ -20,6 +20,7 @@ function Time(props: TimeProps) {
             corDeFundo={props.corPrimaria}
             cargo={colaborador.cargo}
             nome={colaborador.nome}
+            data={colaborador.data}
           />
         ))}
       </div>

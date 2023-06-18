@@ -6,6 +6,7 @@ interface CampoTextoProps {
   required?: boolean;
   label: string;
   valor: string;
+  tipo?: "date" | "text" | "password" | "email" | "number";
 }
 
 function CampoTexto({
@@ -14,6 +15,7 @@ function CampoTexto({
   label,
   valor,
   required = false,
+  tipo = "text",
 }: CampoTextoProps) {
   // let valor = "";
   const aoDigitado = (evento: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,6 +30,7 @@ function CampoTexto({
         placeholder={placeholder}
         onChange={aoDigitado}
         value={valor}
+        type={tipo}
       />
     </div>
   );
